@@ -1,24 +1,124 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="lJh-X2-LdU">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Training-->
+        <scene sceneID="zXe-fY-qbu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                <viewController id="BRf-39-tf2" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dZ8-OG-BBh">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="aAL-mQ-Juy"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Training" image="bolt.horizontal.fill" catalog="system" id="V7r-WZ-5js"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lQI-R3-kdf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="793" y="664"/>
+        </scene>
+        <!--Dictionary-->
+        <scene sceneID="xkK-xh-0XR">
+            <objects>
+                <viewController id="WEO-We-Fde" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="935-ci-C0o">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="ZMP-0U-zQ9"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Dictionary" image="book" catalog="system" id="raV-9B-8Dd"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kwB-cC-CJV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="793" y="-920"/>
+        </scene>
+        <!--Learning Language-->
+        <scene sceneID="88l-ww-l7m">
+            <objects>
+                <viewController id="e9V-a6-5J3" customClass="LanguageViewController" customModule="LanguageApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="1ws-Nd-N9g">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="gl5-Sc-6wc">
+                                <rect key="frame" x="27.5" y="62.5" width="320" height="242.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chose language" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HrP-NV-yPr">
+                                        <rect key="frame" x="82.5" y="0.0" width="155" height="26.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jTi-aw-3gv">
+                                        <rect key="frame" x="0.0" y="26.5" width="320" height="216"/>
+                                    </pickerView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="gl5-Sc-6wc" firstAttribute="centerY" secondItem="1ws-Nd-N9g" secondAttribute="centerY" constant="-150" id="7Qn-XU-12e"/>
+                            <constraint firstItem="gl5-Sc-6wc" firstAttribute="centerX" secondItem="1ws-Nd-N9g" secondAttribute="centerX" id="OE6-Pa-ePW"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="rih-mc-Yu2"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Learning Language" image="globe" catalog="system" id="jze-zr-fSo"/>
+                    <connections>
+                        <outlet property="languageLabel" destination="HrP-NV-yPr" id="5J4-yd-auE"/>
+                        <outlet property="languagePickerView" destination="jTi-aw-3gv" id="s8L-Sa-L66"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TzL-Xt-5kT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="793" y="-155"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="epU-uf-IGx">
+            <objects>
+                <navigationController id="lJh-X2-LdU" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="tQ5-ji-Jde">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="AaX-CQ-khs" kind="relationship" relationship="rootViewController" id="xJ9-Js-HgV"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kSa-r1-Gvl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1023" y="-155"/>
+        </scene>
+        <!--Simple Dictionary-->
+        <scene sceneID="Fcm-d0-7u6">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Z1b-VT-a12" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tabBarController id="AaX-CQ-khs" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" title="Simple Dictionary" id="aeg-K5-YTn"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="A02-wR-wtX">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="WEO-We-Fde" kind="relationship" relationship="viewControllers" id="8p4-VM-C9C"/>
+                        <segue destination="BRf-39-tf2" kind="relationship" relationship="viewControllers" id="qVf-HO-tUx"/>
+                        <segue destination="e9V-a6-5J3" kind="relationship" relationship="viewControllers" id="BCL-HR-AWF"/>
+                    </connections>
+                </tabBarController>
+            </objects>
+            <point key="canvasLocation" x="-268" y="-155"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="bolt.horizontal.fill" catalog="system" width="64" height="32"/>
+        <image name="book" catalog="system" width="64" height="50"/>
+        <image name="globe" catalog="system" width="64" height="60"/>
+    </resources>
 </document>
