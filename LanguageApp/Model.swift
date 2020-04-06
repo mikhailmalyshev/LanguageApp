@@ -9,4 +9,13 @@
 struct WordWithTranslate {
     let word: String?
     let translation: String?
+    
+    static func getDictionary() -> [WordWithTranslate] {
+        var words: [WordWithTranslate] = []
+        let wordsWithTranslate = WordManager.shared.wordWithTranslate
+        for (word,translate) in wordsWithTranslate {
+            words.append(WordWithTranslate(word: word, translation: translate))
+        }
+        return words
+    }
 }

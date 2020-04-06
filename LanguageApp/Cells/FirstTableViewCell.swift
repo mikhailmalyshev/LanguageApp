@@ -9,16 +9,24 @@
 import UIKit
 
 class FirstTableViewCell: UITableViewCell {
-
-    override func awakeFromNib() {
+    
+    var words = WordWithTranslate.getDictionary()
+    
+    @IBOutlet weak var titleOfFirstTableViewCell: UILabel!
+    
+    @IBOutlet weak var subtitleOfFirstTableViewCell: UILabel!
+    override func
+        awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        titleOfFirstTableViewCell.text = "\(words.count) слов"
+        titleOfFirstTableViewCell.font = UIFont.systemFont(ofSize: 20)
+        subtitleOfFirstTableViewCell.text = "0 выучено"
+        subtitleOfFirstTableViewCell.font = UIFont.systemFont(ofSize: 20)
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+        
     }
 
 }

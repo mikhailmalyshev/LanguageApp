@@ -10,6 +10,7 @@ import UIKit
 
 class TeachViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
+    let words: [WordWithTranslate] = []
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -29,15 +30,9 @@ class TeachViewController: UIViewController, UITableViewDelegate, UITableViewDat
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
         if indexPath.section == 0 {
-            let firstSectionCell = tableView.dequeueReusableCell(withIdentifier: "firstSectionCell", for: indexPath)
-            
-            firstSectionCell.textLabel?.text = "0 слов"
-            firstSectionCell.textLabel?.font = UIFont.systemFont(ofSize: 20)
-
-            firstSectionCell.detailTextLabel?.text = "0 выучено"
-            firstSectionCell.detailTextLabel?.font = UIFont.systemFont(ofSize: 20)
-            
+            let firstSectionCell = tableView.dequeueReusableCell(withIdentifier: "firstSectionCell", for: indexPath)     
             return firstSectionCell
         } else {
             let cell = tableView.dequeueReusableCell(withIdentifier: "secondSectionCell", for: indexPath)
@@ -76,36 +71,4 @@ class TeachViewController: UIViewController, UITableViewDelegate, UITableViewDat
         }
     }
 }
-
-
-//extension TeachViewController: UITableViewDelegate, UITableViewDataSource {
-//    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//        if tableView == firstTableView {
-//            return 1
-//        } else {
-//            return 10
-//        }
-//    }
-//
-//    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-//        if tableView == firstTableView {
-//            let cell = tableView.dequeueReusableCell(withIdentifier: "firstTableViewCell", for: indexPath)
-//            cell.textLabel?.text = "0 слов"
-//            cell.detailTextLabel?.text = "0 выучено"
-//            return cell
-//        } else {
-//            let cell = tableView.dequeueReusableCell(withIdentifier: "secondTableViewCell", for: indexPath)
-//            return cell
-//        }
-//    }
-//    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-//        if tableView == firstTableView {
-//            return "Основной словарь"
-//        } else {
-//            return "Наборы слов"
-//        }
-//    }
-//
-//
-//}
 

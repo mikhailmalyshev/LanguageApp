@@ -17,6 +17,8 @@
 		973369692439DF15000F5D52 /* FirstTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 973369682439DF15000F5D52 /* FirstTableViewCell.swift */; };
 		9733696B2439DF20000F5D52 /* SecondTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9733696A2439DF20000F5D52 /* SecondTableViewCell.swift */; };
 		9733696E2439E140000F5D52 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9733696D2439E140000F5D52 /* Model.swift */; };
+		97336970243B52FE000F5D52 /* WordManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9733696F243B52FE000F5D52 /* WordManager.swift */; };
+		97336973243B55AD000F5D52 /* DictionaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97336972243B55AD000F5D52 /* DictionaryViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +34,8 @@
 		973369682439DF15000F5D52 /* FirstTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstTableViewCell.swift; sourceTree = "<group>"; };
 		9733696A2439DF20000F5D52 /* SecondTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondTableViewCell.swift; sourceTree = "<group>"; };
 		9733696D2439E140000F5D52 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		9733696F243B52FE000F5D52 /* WordManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordManager.swift; sourceTree = "<group>"; };
+		97336972243B55AD000F5D52 /* DictionaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,10 +71,10 @@
 				9733696C2439DFFB000F5D52 /* Cells */,
 				973369522434A51F000F5D52 /* AppDelegate.swift */,
 				973369542434A51F000F5D52 /* SceneDelegate.swift */,
-				973369562434A51F000F5D52 /* TeachViewController.swift */,
+				97336971243B5585000F5D52 /* ViewControllers */,
 				973369582434A51F000F5D52 /* Main.storyboard */,
 				9733696D2439E140000F5D52 /* Model.swift */,
-				973369662434AECF000F5D52 /* LanguageViewController.swift */,
+				9733696F243B52FE000F5D52 /* WordManager.swift */,
 				9733695B2434A521000F5D52 /* Assets.xcassets */,
 				9733695D2434A521000F5D52 /* LaunchScreen.storyboard */,
 				973369602434A521000F5D52 /* Info.plist */,
@@ -85,6 +89,16 @@
 				9733696A2439DF20000F5D52 /* SecondTableViewCell.swift */,
 			);
 			path = Cells;
+			sourceTree = "<group>";
+		};
+		97336971243B5585000F5D52 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				973369562434A51F000F5D52 /* TeachViewController.swift */,
+				97336972243B55AD000F5D52 /* DictionaryViewController.swift */,
+				973369662434AECF000F5D52 /* LanguageViewController.swift */,
+			);
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -158,9 +172,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				97336973243B55AD000F5D52 /* DictionaryViewController.swift in Sources */,
 				9733696E2439E140000F5D52 /* Model.swift in Sources */,
 				973369572434A51F000F5D52 /* TeachViewController.swift in Sources */,
 				973369532434A51F000F5D52 /* AppDelegate.swift in Sources */,
+				97336970243B52FE000F5D52 /* WordManager.swift in Sources */,
 				973369692439DF15000F5D52 /* FirstTableViewCell.swift in Sources */,
 				973369672434AECF000F5D52 /* LanguageViewController.swift in Sources */,
 				973369552434A51F000F5D52 /* SceneDelegate.swift in Sources */,
