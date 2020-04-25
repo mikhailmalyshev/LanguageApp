@@ -7,18 +7,23 @@
 //
 
 import UIKit
+import RealmSwift
 
 class TeachViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
-    let words: [WordWithTranslate] = []
-    
     @IBOutlet weak var tableView: UITableView!
+    
+    var words: Results<Word>!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        words = realm.objects(Word.self)
         tableView.delegate = self
         tableView.dataSource = self
-        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        tableView.reloadData()
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -32,7 +37,14 @@ class TeachViewController: UIViewController, UITableViewDelegate, UITableViewDat
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         if indexPath.section == 0 {
-            let firstSectionCell = tableView.dequeueReusableCell(withIdentifier: "firstSectionCell", for: indexPath)     
+            let firstSectionCell = tableView.dequeueReusableCell(withIdentifier: "firstSectionCell", for: indexPath)
+            
+            firstSectionCell.textLabel?.text = "\(words.count) слов"
+            firstSectionCell.textLabel?.font = UIFont.systemFont(ofSize: 20)
+            firstSectionCell.indentationLevel = 12
+            firstSectionCell.detailTextLabel?.text = "0 выучено"
+            firstSectionCell.detailTextLabel?.font = UIFont.systemFont(ofSize: 20)
+            
             return firstSectionCell
         } else {
             let cell = tableView.dequeueReusableCell(withIdentifier: "secondSectionCell", for: indexPath)
@@ -46,11 +58,7 @@ class TeachViewController: UIViewController, UITableViewDelegate, UITableViewDat
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         
         let label = UILabel()
-        if section == 0 {
-            label.text = "Основной словарь"
-        } else {
-            label.text = "Наборы слов"
-        }
+        label.text = section == 0 ? "Основной словарь" : "Наборы слов"
         label.font = UIFont.systemFont(ofSize: 20)
         label.textColor = .white
         label.textAlignment = .center
@@ -70,5 +78,10 @@ class TeachViewController: UIViewController, UITableViewDelegate, UITableViewDat
             return 50
         }
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
+    
 }
 
