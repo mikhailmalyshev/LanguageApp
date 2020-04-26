@@ -101,27 +101,37 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <searchBar contentMode="redraw" placeholder="search" translatesAutoresizingMaskIntoConstraints="NO" id="yKV-dT-8aI">
-                                <rect key="frame" x="0.0" y="44" width="375" height="56"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </searchBar>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="flg-3Y-AfM">
+                                <rect key="frame" x="0.0" y="44" width="375" height="50"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="0zq-0t-bnj"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jMC-g1-LHg">
+                                <rect key="frame" x="10" y="104" width="355" height="30"/>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="laE-eO-lgT"/>
+                                </constraints>
+                                <state key="normal" title="Перевести и добавить в словарь">
+                                    <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <integer key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="findAndAddWordButton" destination="syh-bB-Nx1" eventType="touchUpInside" id="Mzc-ZQ-DDP"/>
+                                </connections>
+                            </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="EfA-cY-sb2">
-                                <rect key="frame" x="0.0" y="100" width="375" height="567"/>
+                                <rect key="frame" x="0.0" y="144" width="375" height="523"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                <button key="tableHeaderView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" id="qNF-3s-ODt">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    <color key="tintColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                                    <state key="normal" title="Перевести и добавить в словарь"/>
-                                    <state key="highlighted" title="Добавлено"/>
-                                    <connections>
-                                        <action selector="findAndAddWordButton" destination="syh-bB-Nx1" eventType="touchUpInside" id="ja5-om-WAY"/>
-                                    </connections>
-                                </button>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="dictionary" textLabel="lBX-kJ-bp2" detailTextLabel="E3t-V7-lMD" style="IBUITableViewCellStyleSubtitle" id="40i-sv-Akg">
-                                        <rect key="frame" x="0.0" y="72" width="375" height="55.5"/>
+                                        <rect key="frame" x="0.0" y="28" width="375" height="55.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="40i-sv-Akg" id="0AR-tZ-Rub">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="55.5"/>
@@ -149,25 +159,28 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="NVa-JX-0uq" firstAttribute="bottom" secondItem="EfA-cY-sb2" secondAttribute="bottom" id="Fum-oS-sop"/>
-                            <constraint firstItem="yKV-dT-8aI" firstAttribute="trailing" secondItem="NVa-JX-0uq" secondAttribute="trailing" id="Q1w-Op-1Iq"/>
-                            <constraint firstItem="yKV-dT-8aI" firstAttribute="top" secondItem="NVa-JX-0uq" secondAttribute="top" id="QIa-Er-d7Y"/>
-                            <constraint firstItem="NVa-JX-0uq" firstAttribute="trailing" secondItem="EfA-cY-sb2" secondAttribute="trailing" id="UCL-Ae-d11"/>
-                            <constraint firstItem="EfA-cY-sb2" firstAttribute="leading" secondItem="NVa-JX-0uq" secondAttribute="leading" id="UDq-Y9-Mbw"/>
-                            <constraint firstItem="EfA-cY-sb2" firstAttribute="top" secondItem="yKV-dT-8aI" secondAttribute="bottom" id="lPg-FQ-zaY"/>
-                            <constraint firstItem="yKV-dT-8aI" firstAttribute="leading" secondItem="NVa-JX-0uq" secondAttribute="leading" id="n89-CN-f3d"/>
+                            <constraint firstItem="flg-3Y-AfM" firstAttribute="top" secondItem="NVa-JX-0uq" secondAttribute="top" id="5ev-Nq-Uzm"/>
+                            <constraint firstItem="NVa-JX-0uq" firstAttribute="trailing" secondItem="jMC-g1-LHg" secondAttribute="trailing" constant="10" id="BUz-QU-ls5"/>
+                            <constraint firstAttribute="bottom" secondItem="EfA-cY-sb2" secondAttribute="bottom" id="GfR-ka-Um7"/>
+                            <constraint firstItem="EfA-cY-sb2" firstAttribute="leading" secondItem="NVa-JX-0uq" secondAttribute="leading" id="I7y-Rm-eBJ"/>
+                            <constraint firstItem="EfA-cY-sb2" firstAttribute="top" secondItem="jMC-g1-LHg" secondAttribute="bottom" constant="10" id="P1O-QL-DFr"/>
+                            <constraint firstItem="flg-3Y-AfM" firstAttribute="trailing" secondItem="NVa-JX-0uq" secondAttribute="trailing" id="YgV-eB-ck8"/>
+                            <constraint firstItem="EfA-cY-sb2" firstAttribute="trailing" secondItem="NVa-JX-0uq" secondAttribute="trailing" id="p6y-w9-8Fj"/>
+                            <constraint firstItem="jMC-g1-LHg" firstAttribute="top" secondItem="flg-3Y-AfM" secondAttribute="bottom" constant="10" id="rQ6-Fk-dr1"/>
+                            <constraint firstItem="jMC-g1-LHg" firstAttribute="leading" secondItem="NVa-JX-0uq" secondAttribute="leading" constant="10" id="yKC-BY-WYw"/>
+                            <constraint firstItem="flg-3Y-AfM" firstAttribute="leading" secondItem="NVa-JX-0uq" secondAttribute="leading" id="zrP-XV-ZQL"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="NVa-JX-0uq"/>
                     </view>
                     <navigationItem key="navigationItem" id="E1H-Dk-pQs"/>
                     <connections>
                         <outlet property="dictionaryTableView" destination="EfA-cY-sb2" id="RNy-KA-RB6"/>
-                        <outlet property="searchBar" destination="yKV-dT-8aI" id="DW4-YW-Zvg"/>
+                        <outlet property="searchControllerContainerView" destination="flg-3Y-AfM" id="uHU-o6-A6g"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MeZ-gr-tdD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1630" y="-921"/>
+            <point key="canvasLocation" x="1629.5999999999999" y="-921.58920539730138"/>
         </scene>
         <!--Learning Language-->
         <scene sceneID="88l-ww-l7m">
@@ -178,7 +191,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="gl5-Sc-6wc">
-                                <rect key="frame" x="27.5" y="62.5" width="320" height="242.5"/>
+                                <rect key="frame" x="27.5" y="69" width="320" height="242.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chose language" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HrP-NV-yPr">
                                         <rect key="frame" x="82.5" y="0.0" width="155" height="26.5"/>
@@ -194,8 +207,8 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="gl5-Sc-6wc" firstAttribute="centerY" secondItem="1ws-Nd-N9g" secondAttribute="centerY" constant="-150" id="7Qn-XU-12e"/>
                             <constraint firstItem="gl5-Sc-6wc" firstAttribute="centerX" secondItem="1ws-Nd-N9g" secondAttribute="centerX" id="OE6-Pa-ePW"/>
+                            <constraint firstItem="gl5-Sc-6wc" firstAttribute="top" secondItem="rih-mc-Yu2" secondAttribute="top" constant="25" id="gOe-iP-jmY"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="rih-mc-Yu2"/>
                     </view>
@@ -237,8 +250,8 @@
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <color key="selectedImageTintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="selectedImageTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
                         <segue destination="WEO-We-Fde" kind="relationship" relationship="viewControllers" id="8p4-VM-C9C"/>
