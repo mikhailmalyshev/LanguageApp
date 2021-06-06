@@ -42,7 +42,7 @@ class TeachViewController: UIViewController, UITableViewDelegate, UITableViewDat
             firstSectionCell.textLabel?.text = "\(words.count) слов"
             firstSectionCell.textLabel?.font = UIFont.systemFont(ofSize: 20)
             firstSectionCell.indentationLevel = 12
-            firstSectionCell.detailTextLabel?.text = "0 выучено"
+            firstSectionCell.detailTextLabel?.text = "\(words.filter("isLearn == true").count) выучено"
             firstSectionCell.detailTextLabel?.font = UIFont.systemFont(ofSize: 20)
             
             return firstSectionCell

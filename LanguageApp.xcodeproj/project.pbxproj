@@ -15,10 +15,13 @@
 		9733695C2434A521000F5D52 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9733695B2434A521000F5D52 /* Assets.xcassets */; };
 		9733695F2434A521000F5D52 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9733695D2434A521000F5D52 /* LaunchScreen.storyboard */; };
 		973369672434AECF000F5D52 /* LanguageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 973369662434AECF000F5D52 /* LanguageViewController.swift */; };
-		9733696E2439E140000F5D52 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9733696D2439E140000F5D52 /* Models.swift */; };
+		9733696E2439E140000F5D52 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9733696D2439E140000F5D52 /* Model.swift */; };
 		97336970243B52FE000F5D52 /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9733696F243B52FE000F5D52 /* StorageManager.swift */; };
 		97336973243B55AD000F5D52 /* DictionaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97336972243B55AD000F5D52 /* DictionaryViewController.swift */; };
+		974DBD8B2455D21600C95603 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 974DBD8A2455D21600C95603 /* DetailViewController.swift */; };
 		97632877244C56F500D7DECA /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97632876244C56F500D7DECA /* NetworkManager.swift */; };
+		977DD122246094B500F11F99 /* TrainingQuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 977DD121246094B500F11F99 /* TrainingQuestionViewController.swift */; };
+		97A9D55B246948EF00BE517F /* ChooseTrainingModeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97A9D55A246948EF00BE517F /* ChooseTrainingModeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,10 +36,13 @@
 		9733695E2434A521000F5D52 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		973369602434A521000F5D52 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		973369662434AECF000F5D52 /* LanguageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageViewController.swift; sourceTree = "<group>"; };
-		9733696D2439E140000F5D52 /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
+		9733696D2439E140000F5D52 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		9733696F243B52FE000F5D52 /* StorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
 		97336972243B55AD000F5D52 /* DictionaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryViewController.swift; sourceTree = "<group>"; };
+		974DBD8A2455D21600C95603 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		97632876244C56F500D7DECA /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		977DD121246094B500F11F99 /* TrainingQuestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingQuestionViewController.swift; sourceTree = "<group>"; };
+		97A9D55A246948EF00BE517F /* ChooseTrainingModeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseTrainingModeViewController.swift; sourceTree = "<group>"; };
 		DC16470A0803BC7F9A4553C0 /* Pods-LanguageApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LanguageApp.debug.xcconfig"; path = "Target Support Files/Pods-LanguageApp/Pods-LanguageApp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -100,6 +106,9 @@
 				973369562434A51F000F5D52 /* TeachViewController.swift */,
 				97336972243B55AD000F5D52 /* DictionaryViewController.swift */,
 				973369662434AECF000F5D52 /* LanguageViewController.swift */,
+				977DD121246094B500F11F99 /* TrainingQuestionViewController.swift */,
+				97A9D55A246948EF00BE517F /* ChooseTrainingModeViewController.swift */,
+				974DBD8A2455D21600C95603 /* DetailViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -107,7 +116,7 @@
 		974DBD872455CF4A00C95603 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				9733696D2439E140000F5D52 /* Models.swift */,
+				9733696D2439E140000F5D52 /* Model.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -167,7 +176,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1130;
-				LastUpgradeCheck = 1130;
+				LastUpgradeCheck = 1240;
 				ORGANIZATIONNAME = "Mikhail Malyshev";
 				TargetAttributes = {
 					9733694E2434A51F000F5D52 = {
@@ -253,14 +262,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				974DBD8B2455D21600C95603 /* DetailViewController.swift in Sources */,
 				97336973243B55AD000F5D52 /* DictionaryViewController.swift in Sources */,
-				9733696E2439E140000F5D52 /* Models.swift in Sources */,
+				9733696E2439E140000F5D52 /* Model.swift in Sources */,
 				97632877244C56F500D7DECA /* NetworkManager.swift in Sources */,
 				973369572434A51F000F5D52 /* TeachViewController.swift in Sources */,
 				973369532434A51F000F5D52 /* AppDelegate.swift in Sources */,
 				97336970243B52FE000F5D52 /* StorageManager.swift in Sources */,
 				973369672434AECF000F5D52 /* LanguageViewController.swift in Sources */,
+				977DD122246094B500F11F99 /* TrainingQuestionViewController.swift in Sources */,
 				973369552434A51F000F5D52 /* SceneDelegate.swift in Sources */,
+				97A9D55B246948EF00BE517F /* ChooseTrainingModeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -312,6 +324,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -336,7 +349,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -372,6 +385,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -390,7 +404,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;

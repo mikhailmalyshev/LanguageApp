@@ -10,7 +10,6 @@ import UIKit
 
 class LanguageViewController: UIViewController {
     
-    
     @IBOutlet weak var languageLabel: UILabel!
     @IBOutlet weak var languagePickerView: UIPickerView!
     

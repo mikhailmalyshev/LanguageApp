@@ -15,12 +15,29 @@ class NetworkManager {
     
     static let shared = NetworkManager()
     
-    func getTranslate(text: String, lang: String, completion: @escaping (Translation?) -> Void) {
-        guard let url = URL(string: "https://translate.yandex.net/api/v1.5/tr.json/translate?key=\(key)&text=\(text)&lang=\(lang)&format=plain&options=1") else { return }
-        var request = URLRequest(url: url)
-        request.httpMethod = "POST"
+    func getTranslate(text: String, lang: String? = nil, completion: @escaping (Translation?) -> Void) {
         
-        URLSession.shared.dataTask(with: request) { (data, response, error) in
+        let headers = [
+            "content-type": "application/json",
+            "x-rapidapi-key": "fb5163cc14msh047bcdd9e5685efp1b342fjsn731fab699046",
+            "x-rapidapi-host": "language-translation.p.rapidapi.com"
+        ]
+        let parameters = [
+            "target": "ru",
+            "text": text,
+            "type": "plain"
+        ] as [String : Any]
+
+        let postData = try! JSONSerialization.data(withJSONObject: parameters, options: [])
+        let request = NSMutableURLRequest(url: NSURL(string: "https://language-translation.p.rapidapi.com/translateLanguage/translate")! as URL,
+                                                cachePolicy: .useProtocolCachePolicy,
+                                            timeoutInterval: 10.0)
+        request.httpMethod = "POST"
+        request.allHTTPHeaderFields = headers
+        request.httpBody = postData as Data
+        
+        
+        URLSession.shared.dataTask(with: request as URLRequest) { (data, response, error) in
             if let error = error {
                 print(error.localizedDescription)
                 print("first error")

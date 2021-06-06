@@ -27,6 +27,12 @@ class StorageManager {
         }
     }
     
+    func done(word: Word) {
+        write {
+            word.setValue(true, forKey: "isLearn")
+        }
+    }
+    
     private func write(_ completion: () -> Void) {
         do {
             try realm.write {

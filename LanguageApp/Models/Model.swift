@@ -22,6 +22,6 @@ class WordList: Object {
     let words = List<Word>()
 }
 
-struct Translation: Decodable {
-    let text: [String]
+struct Translation: Codable {
+    let translatedText: String
 }
