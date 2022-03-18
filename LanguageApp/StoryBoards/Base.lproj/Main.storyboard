@@ -414,48 +414,6 @@
             </objects>
             <point key="canvasLocation" x="2386" y="-922"/>
         </scene>
-        <!--Learning Language-->
-        <scene sceneID="88l-ww-l7m">
-            <objects>
-                <viewController id="e9V-a6-5J3" customClass="LanguageViewController" customModule="LanguageApp" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="1ws-Nd-N9g">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="gl5-Sc-6wc">
-                                <rect key="frame" x="27.5" y="69" width="320" height="242.5"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chose language" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HrP-NV-yPr">
-                                        <rect key="frame" x="83" y="0.0" width="154.5" height="26.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jTi-aw-3gv">
-                                        <rect key="frame" x="0.0" y="26.5" width="320" height="216"/>
-                                    </pickerView>
-                                </subviews>
-                            </stackView>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="rih-mc-Yu2"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="gl5-Sc-6wc" firstAttribute="centerX" secondItem="1ws-Nd-N9g" secondAttribute="centerX" id="OE6-Pa-ePW"/>
-                            <constraint firstItem="gl5-Sc-6wc" firstAttribute="top" secondItem="rih-mc-Yu2" secondAttribute="top" constant="25" id="gOe-iP-jmY"/>
-                        </constraints>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Learning Language" image="globe" catalog="system" id="jze-zr-fSo">
-                        <color key="badgeColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    </tabBarItem>
-                    <connections>
-                        <outlet property="languageLabel" destination="HrP-NV-yPr" id="5J4-yd-auE"/>
-                        <outlet property="languagePickerView" destination="jTi-aw-3gv" id="s8L-Sa-L66"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="TzL-Xt-5kT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="793" y="-155"/>
-        </scene>
         <!--Navigation Controller-->
         <scene sceneID="epU-uf-IGx">
             <objects>
@@ -488,7 +446,6 @@
                     <connections>
                         <segue destination="WEO-We-Fde" kind="relationship" relationship="viewControllers" id="8p4-VM-C9C"/>
                         <segue destination="BRf-39-tf2" kind="relationship" relationship="viewControllers" id="qVf-HO-tUx"/>
-                        <segue destination="e9V-a6-5J3" kind="relationship" relationship="viewControllers" id="BCL-HR-AWF"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Z1b-VT-a12" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -502,7 +459,6 @@
     <resources>
         <image name="bolt.horizontal.fill" catalog="system" width="128" height="60"/>
         <image name="book" catalog="system" width="128" height="102"/>
-        <image name="globe" catalog="system" width="128" height="121"/>
         <systemColor name="groupTableViewBackgroundColor">
             <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

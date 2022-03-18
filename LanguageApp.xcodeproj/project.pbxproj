@@ -14,7 +14,6 @@
 		9733695A2434A51F000F5D52 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 973369582434A51F000F5D52 /* Main.storyboard */; };
 		9733695C2434A521000F5D52 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9733695B2434A521000F5D52 /* Assets.xcassets */; };
 		9733695F2434A521000F5D52 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9733695D2434A521000F5D52 /* LaunchScreen.storyboard */; };
-		973369672434AECF000F5D52 /* LanguageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 973369662434AECF000F5D52 /* LanguageViewController.swift */; };
 		9733696E2439E140000F5D52 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9733696D2439E140000F5D52 /* Model.swift */; };
 		97336970243B52FE000F5D52 /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9733696F243B52FE000F5D52 /* StorageManager.swift */; };
 		97336973243B55AD000F5D52 /* DictionaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97336972243B55AD000F5D52 /* DictionaryViewController.swift */; };
@@ -35,7 +34,6 @@
 		9733695B2434A521000F5D52 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9733695E2434A521000F5D52 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		973369602434A521000F5D52 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		973369662434AECF000F5D52 /* LanguageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageViewController.swift; sourceTree = "<group>"; };
 		9733696D2439E140000F5D52 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		9733696F243B52FE000F5D52 /* StorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
 		97336972243B55AD000F5D52 /* DictionaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryViewController.swift; sourceTree = "<group>"; };
@@ -105,7 +103,6 @@
 			children = (
 				973369562434A51F000F5D52 /* TeachViewController.swift */,
 				97336972243B55AD000F5D52 /* DictionaryViewController.swift */,
-				973369662434AECF000F5D52 /* LanguageViewController.swift */,
 				977DD121246094B500F11F99 /* TrainingQuestionViewController.swift */,
 				97A9D55A246948EF00BE517F /* ChooseTrainingModeViewController.swift */,
 				974DBD8A2455D21600C95603 /* DetailViewController.swift */,
@@ -269,7 +266,6 @@
 				973369572434A51F000F5D52 /* TeachViewController.swift in Sources */,
 				973369532434A51F000F5D52 /* AppDelegate.swift in Sources */,
 				97336970243B52FE000F5D52 /* StorageManager.swift in Sources */,
-				973369672434AECF000F5D52 /* LanguageViewController.swift in Sources */,
 				977DD122246094B500F11F99 /* TrainingQuestionViewController.swift in Sources */,
 				973369552434A51F000F5D52 /* SceneDelegate.swift in Sources */,
 				97A9D55B246948EF00BE517F /* ChooseTrainingModeViewController.swift in Sources */,

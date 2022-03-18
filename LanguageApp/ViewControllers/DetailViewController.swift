@@ -12,7 +12,6 @@ class DetailViewController: UIViewController {
     
     var word = Word()
     
-    
     @IBOutlet weak var wordLabel: UILabel!
     @IBOutlet weak var translateLabel: UILabel!
     

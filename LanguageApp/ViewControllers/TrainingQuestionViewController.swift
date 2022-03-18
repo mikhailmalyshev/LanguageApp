@@ -10,6 +10,15 @@ import UIKit
 import RealmSwift
 
 class TrainingQuestionViewController: UIViewController {
+
+    private let realm = try! Realm()
+    private lazy var words: Results<Word> = { self.realm.objects(Word.self) }()
+    private lazy var wordsIsNotLearned: Results<Word> = { self.realm.objects(Word.self).filter("isLearn == false")}()
+    var mode = ""
+    private var buttons: [UIButton] = []
+    private var stage = 0
+    private var rightIndex = 0
+    private var currentWordsCount = 0
     
     @IBOutlet weak var countLabel: UILabel!
     @IBOutlet weak var wordLabel: UILabel!
@@ -17,25 +26,11 @@ class TrainingQuestionViewController: UIViewController {
     @IBOutlet weak var button2: UIButton!
     @IBOutlet weak var button3: UIButton!
     @IBOutlet weak var button4: UIButton!
-    
-    
     @IBOutlet weak var resultLabel: UILabel!
     @IBOutlet weak var questionsStackView: UIStackView!
     
-    var words: Results<Word>!
-    var wordsIsNotLearned: Results<Word>!
-    var mode = ""
-    
-    var buttons: [UIButton] = []
-    var stage = 0
-    var rightIndex = 0
-    var currentWordsCount = 0
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        words = realm.objects(Word.self)
-        wordsIsNotLearned = realm.objects(Word.self).filter("isLearn == false")
         
         buttons.append(button1)
         buttons.append(button2)
@@ -44,10 +39,9 @@ class TrainingQuestionViewController: UIViewController {
         resultLabel.isHidden = true
         
         startRound()
-        
     }
     
-    func startRound() {
+    private func startRound() {
         
         if stage + 1 > wordsIsNotLearned.count {
             showResultView()
@@ -113,7 +107,7 @@ class TrainingQuestionViewController: UIViewController {
         }
     }
     
-    func getRandomListOf(words: Results<Word>!) -> [Word] {
+    private func getRandomListOf(words: Results<Word>!) -> [Word] {
         var randomWords: [Word] = []
         let randomWordsFromRealm = words.shuffled()
         for word in randomWordsFromRealm {
@@ -122,7 +116,7 @@ class TrainingQuestionViewController: UIViewController {
         return randomWords
     }
     
-    func showResultView() {
+    private func showResultView() {
         questionsStackView.isHidden = true
         resultLabel.isHidden = false
         resultLabel.text = "Ты правильно ответил на \(currentWordsCount) из \(stage) вопросов! Молодец!"

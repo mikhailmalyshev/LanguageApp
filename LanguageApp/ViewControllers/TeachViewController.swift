@@ -11,13 +11,13 @@ import RealmSwift
 
 class TeachViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
-    @IBOutlet weak var tableView: UITableView!
+    private let realm = try! Realm()
+    private lazy var words: Results<Word> = { self.realm.objects(Word.self) }()
     
-    var words: Results<Word>!
+    @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        words = realm.objects(Word.self)
         tableView.delegate = self
         tableView.dataSource = self
     }

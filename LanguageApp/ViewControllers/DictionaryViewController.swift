@@ -14,7 +14,8 @@ class DictionaryViewController: UIViewController {
     //MARK: Priavte properties
     
     private var searchController: UISearchController!
-    private var words: Results<Word>!
+    private let realm = try! Realm()
+    private lazy var words: Results<Word> = { self.realm.objects(Word.self) }()
     private var searchResults = try! Realm().objects(Word.self)
     
     //MARK: IBOutlets
@@ -36,8 +37,6 @@ class DictionaryViewController: UIViewController {
 //        searchController.searchBar.showsBookmarkButton = true
 //        searchController.searchBar.setImage(UIImage(systemName: "plus"), for: .bookmark, state: .normal)
 //        searchController.searchBar.layoutIfNeeded()
-    
-        words = realm.objects(Word.self)
         
         dictionaryTableView.delegate = self
         dictionaryTableView.dataSource = self
